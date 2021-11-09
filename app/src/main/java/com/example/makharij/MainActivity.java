@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = (Button) findViewById(R.id.rep);
+        Button button = findViewById(R.id.rep);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String url="https://github.com/Alizaib3311/makharij_quiz";
@@ -25,6 +25,33 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//
+//// this has prob
+        Button lrn =findViewById(R.id.learn);
+        lrn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, learn.class);
+                startActivity(intent);
+
+            }
+        });
+        Button quiz =findViewById(R.id.quiz);
+        quiz.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, quiz.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
+
+
+
+
+
     }
 
 }
