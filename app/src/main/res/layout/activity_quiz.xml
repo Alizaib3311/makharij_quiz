@@ -8,55 +8,98 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="382dp"
-        android:layout_height="149dp"
-        android:layout_marginBottom="44dp"
+        android:layout_width="139dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif-black"
+
+        android:scaleX="2"
+        android:scaleY="2"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/opt1"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-    <RadioButton
-        android:id="@+id/opt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="RadioButton"
-        app:layout_constraintBottom_toTopOf="@+id/opt2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RadioButton
-        android:id="@+id/opt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="RadioButton"
-        app:layout_constraintBottom_toTopOf="@+id/opt3"
-        app:layout_constraintEnd_toEndOf="@+id/opt1"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/opt1" />
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="136dp"
         android:fontFamily="sans-serif-black"
         android:text="quiz"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
 
-    <RadioButton
-        android:id="@+id/opt3"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="334dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="200dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/question"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="@+id/question">
+
+
+        <RadioButton
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="radio"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="390dp" />
+
+        <RadioButton
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="radio2"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <RadioButton
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="radio3"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="462dp" />
+        <RadioButton
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="radio4"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="462dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
-        android:text="RadioButton"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/opt2"
-        app:layout_constraintStart_toStartOf="@+id/opt2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="From where this letter is produced"
+        app:layout_constraintBottom_toTopOf="@+id/question"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
