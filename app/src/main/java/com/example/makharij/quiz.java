@@ -16,31 +16,135 @@ import java.util.Random;
 public class quiz extends AppCompatActivity {
 
 
-    String[] quest={"أ ہ","ع ح","غ خ","ق"};
-    String[] ans={"End of Throat","Middle of Throat","Start of the Throat","Base of Tongue which is near Uvula touching the mouth roof"};
+    String[] quest={"أ ہ","ع ح","غ خ","ق","ک" ,"ض" ,"ل" ,"ن" ,"ر" ,"ت د ط"};
+    String[] ans={"End of Throat","Middle of Throat","Start of the Throat","Base of Tongue which is near Uvula touching the mouth roof","Portion of Tongue near its base touching the roof of mouth", "One side of the tongue touching the molar teeth","Rounded tip of the tongue touching the base of the frontal 8 teeth","Rounded tip of the tongue touching the base of the frontal 6 teeth","Rounded tip of the tongue and some portion near it touching the base of the frontal 4 teeth" ,"Tip of the tongue touching the base of the front 2 teeth"};
     //String[] option={"End of Throat","Middle of Throat","Start of the Throat","Base of Tongue which is near Uvula touching the mouth roof"};
     TextView t1;
     Button next;
-    RadioButton r1,r2,r3,r4;
-    int score=0 , i=0;;
+    //RadioButton r1,r2,r3,r4;
+    Button r1,r2,r3,r4;
+    int score=0 , i=0 ,quest_count=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        generate_question();
 
+
+           r1 = findViewById(R.id.r1);
+           r1.setOnClickListener(new View.OnClickListener() {
+               public void onClick(View v) {
+                   if (i<10 && r1.getText() == ans[i]) {
+                       score++;
+                       i++;
+
+
+                       generate_question();
+                   }
+               }
+           });
+           r2 = findViewById(R.id.r2);
+           r2.setOnClickListener(new View.OnClickListener() {
+               public void onClick(View v) {
+                   if (i<10 && r2.getText() == ans[i]) {
+                       score++;
+                       i++;
+                       generate_question();
+                   }
+               }
+           });
+           r3 = findViewById(R.id.r3);
+           r3.setOnClickListener(new View.OnClickListener() {
+               public void onClick(View v) {
+                   if (i<10 && r3.getText() == ans[i]) {
+                       score++;
+                       i++;
+                       generate_question();
+                   }
+               }
+           });
+           r4 = findViewById(R.id.r4);
+           r4.setOnClickListener(new View.OnClickListener() {
+               public void onClick(View v) {
+                   if (i<10 && r1.getText() == ans[i] && r2.getText() == ans[i] && r3.getText() == ans[i]) {
+                       score++;
+                       i++;
+                       generate_question();
+                   }
+               }
+           });
+
+
+
+    }
+
+
+    public void generate_question()
+    {
         t1=findViewById(R.id.question);
         r1=findViewById(R.id.r1);
         r2=findViewById(R.id.r2);
         r3=findViewById(R.id.r3);
         r4=findViewById(R.id.r4);
         r4.setText("None of above");
-
         int ansL= ans.length;
         Random r = new Random();
         int i1 = r.nextInt(ansL-0)+0;
+        t1.setText(quest[i]);
+        r1.setText(ans[i1]);
+        i1 = r.nextInt(ansL - 0) + 0;
+        r2.setText(ans[i1]);
+        i1 = r.nextInt(ansL - 0) + 0;
+        r3.setText(ans[i1]);
+    }
 
+}
+
+
+
+/*
+
+
+
+
+
+
+
+
+///////////////////////////////////////
+
+public class quiz extends AppCompatActivity {
+
+    String[] quest={"أ ہ","ع ح","غ خ","ق","ک" ,"ض" ,"ل" ,"ن" ,"ر" ,"ت د ط"};
+    String[] ans={"End of Throat","Middle of Throat","Start of the Throat","Base of Tongue which is near Uvula touching the mouth roof","Portion of Tongue near its base touching the roof of mouth", "One side of the tongue touching the molar teeth","Rounded tip of the tongue touching the base of the frontal 8 teeth","Rounded tip of the tongue touching the base of the frontal 6 teeth","Rounded tip of the tongue and some portion near it touching the base of the frontal 4 teeth" ,"Tip of the tongue touching the base of the front 2 teeth"};
+
+   //String[] option={"End of Throat","Middle of Throat","Start of the Throat","Base of Tongue which is near Uvula touching the mouth roof"};
+    TextView t1;
+    Button next;
+    RadioButton r1,r2,r3,r4,rb ;
+
+    RadioGroup rg;
+
+    int score=0 , i=0, quest_count=0;;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz);
+
+    while(quest_count<10){
+        rg=findViewById(R.id.radioGroup);
+        t1=findViewById(R.id.question);
+        r1=findViewById(R.id.r1);
+        r2=findViewById(R.id.r2);
+        r3=findViewById(R.id.r3);
+        r4=findViewById(R.id.r4);
+        r4.setText("None of above");
+        int ansL= ans.length;
+        Random r = new Random();
+        int i1 = r.nextInt(ansL-0)+0;
         t1.setText(quest[i]);
         r1.setText(ans[i1]);
         i1 = r.nextInt(ansL - 0) + 0;
@@ -48,11 +152,31 @@ public class quiz extends AppCompatActivity {
         i1 = r.nextInt(ansL - 0) + 0;
         r3.setText(ans[i1]);
 
+        int radioid= rg.getCheckedRadioButtonId();
+        rb=findViewById(radioid);
+        if(r1.isChecked() || r2.isChecked() || r3.isChecked() || r4.isChecked() ) {
+            RadioButton rb = findViewById(rg.getCheckedRadioButtonId());
+            String check_ans = rb.getText().toString();
+            if (rb.getText() == ans[i]) {
+                score++;
+            }
+        }
+        next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                quest_count++;
+                i++;
+            }
+        });
 
-        Boolean RadioButtonState2 = r2.isChecked();
+}
+        */
+/*Boolean RadioButtonState2 = r2.isChecked();
         Boolean RadioButtonState3 = r3.isChecked();
-        Boolean RadioButtonState4 = r4.isChecked();
-        if(r1.isChecked() && r1.getText() == ans[i]){
+        Boolean RadioButtonState4 = r4.isChecked();*//*
+
+        */
+/*if(r1.isChecked() && r1.getText() == ans[i]){
             score++;
         }else if (r2.isChecked() && r2.getText() == ans[i])
         {
@@ -60,29 +184,31 @@ public class quiz extends AppCompatActivity {
         }else if (r3.isChecked() && r3.getText() == ans[i])
         {
             score++;
-        }else{
+        }else if (r4.isChecked()){
             score++;
-        }
+        }else{
 
-
-
-        do{
-        next = findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-            }
-        });
-        i++;
-
-        }while (i<=quest.length);
-
-
+        }*//*
 
 
     }
 
+    */
+/*public void checkButton(View v){
+        int radii= rg.getCheckedRadioButtonId();
+        rb=findViewById(radii);
+        *//*
+*/
+/*RadioButton rb = findViewById(rg.getCheckedRadioButtonId());
+        String check_ans = rb.getText().toString();*//*
+*/
+/*
+        if(rb.getText()==ans[i]){
+            score++;
+        }
 
 
+    }
+*//*
 
-}
+}*/
