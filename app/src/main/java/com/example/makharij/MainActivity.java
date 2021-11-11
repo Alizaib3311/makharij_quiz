@@ -16,17 +16,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TextView score_view;
+/*
         Button score_view;
         score_view=findViewById(R.id.score_view);
-        //score_view.setVisibility(View.GONE);
-
 
         score_view.setText("Score will appear here");
         Intent intent = getIntent();
         score_view.setText(intent.getStringExtra("score"));
         score_view.setBackgroundColor(Color.RED);
-        //score_view.setVisibility(View.VISIBLE);
         score_view.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent sendIntent = new Intent();
@@ -37,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(shareIntent);
 
             }
-        });
+        });*/
         Button button = findViewById(R.id.rep);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

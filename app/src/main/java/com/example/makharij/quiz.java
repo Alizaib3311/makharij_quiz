@@ -38,7 +38,7 @@ public class quiz extends AppCompatActivity {
                        score_quiz=findViewById(R.id.question);
                        score_quiz.setText("your Score is :"+score);
 
-                       Intent intent = new Intent(quiz.this, MainActivity.class);
+                       Intent intent = new Intent(quiz.this, share.class);
                        intent.putExtra("score", "Share your Score :"+score);
                        startActivity(intent);
 
@@ -58,7 +58,7 @@ public class quiz extends AppCompatActivity {
                    }else if (i==9)
                    {
 
-                       Intent intent = new Intent(quiz.this, MainActivity.class);
+                       Intent intent = new Intent(quiz.this, share.class);
                        intent.putExtra("score", "Share your Score :"+score);
                        startActivity(intent);
 
@@ -77,7 +77,7 @@ public class quiz extends AppCompatActivity {
 
                    }else if (i==9)
                    {
-                       Intent intent = new Intent(quiz.this, MainActivity.class);
+                       Intent intent = new Intent(quiz.this, share.class);
                        intent.putExtra("score", "Share your Score :"+score);
                        startActivity(intent);
 
@@ -97,7 +97,7 @@ public class quiz extends AppCompatActivity {
 
                    }else if (i==9)
                    {
-                       Intent intent = new Intent(quiz.this, MainActivity.class);
+                       Intent intent = new Intent(quiz.this, share.class);
                        intent.putExtra("score", "Share your Score :"+score);
                        startActivity(intent);
                    }
