@@ -20,7 +20,7 @@
         android:id="@+id/learn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="28dp"
         android:text="Learn"
         app:layout_constraintBottom_toTopOf="@+id/score_view"
@@ -39,11 +39,11 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="56dp"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintBottom_toTopOf="@+id/learn"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="@+id/textView2">
 
     </ImageView>
@@ -57,29 +57,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        app:layout_constraintVertical_bias="0.771" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="79dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="68dp"
         android:text="Bsef18a533"
+
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="@+id/textView" />
 
-    <TextView
+    <Button
         android:id="@+id/score_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
-        android:text="SCORE"
-
+        android:layout_marginBottom="20dp"
+        android:text="Score"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/quiz"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/rep" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

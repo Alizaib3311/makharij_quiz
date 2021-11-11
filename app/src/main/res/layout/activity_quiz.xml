@@ -68,13 +68,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/r4"
+        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintEnd_toEndOf="@+id/r2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/r2" />
 
     <Button
-        android:id="@+id/r4"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
@@ -83,4 +83,5 @@
         app:layout_constraintEnd_toEndOf="@+id/r3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/r3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
