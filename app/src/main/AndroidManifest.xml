@@ -9,15 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Makharij">
-        <activity android:name=".share"></activity>
-        <activity android:name=".quiz" />
-        <activity android:name=".learn" />
+        <activity android:name=".share"
+            android:parentActivityName=".quiz" />
+        <activity android:name=".quiz" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".learn" android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.makharij.MainActivity" />
         </activity>
     </application>
 

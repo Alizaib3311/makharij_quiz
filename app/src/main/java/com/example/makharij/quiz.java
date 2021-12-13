@@ -1,6 +1,8 @@
 package com.example.makharij;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +27,11 @@ public class quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        getSupportActionBar().setTitle("activity_quiz");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         generate_question();
            r1 = findViewById(R.id.r1);
            r1.setOnClickListener(new View.OnClickListener() {

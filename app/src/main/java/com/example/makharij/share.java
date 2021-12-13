@@ -1,6 +1,8 @@
 package com.example.makharij;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +15,14 @@ public class share extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_share); TextView score_view;
+        setContentView(R.layout.activity_share);
+
+        getSupportActionBar().setTitle("activity_share");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+        TextView score_view;
         Button share,home1;
         score_view=findViewById(R.id.score_view);
         Intent intent = getIntent();

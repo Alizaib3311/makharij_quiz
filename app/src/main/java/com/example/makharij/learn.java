@@ -1,6 +1,8 @@
 package com.example.makharij;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +24,11 @@ public class learn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learn);
+        getSupportActionBar().setTitle("activity_learn");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
         generate_Ans();
 
         next=findViewById(R.id.next);
